@@ -21,6 +21,7 @@ var logs = require('./routes/logs');
 var topic_charts = require('./routes/topics_charts');
 var total_events = require('./routes/total_events');
 var admin  = require('./routes/admin');
+var recommender = require('./routes/recommender');
 var app = express();
 
 // view engine setup
@@ -56,6 +57,7 @@ app.use('/logs', logs);
 app.use('/topics_charts', topic_charts);
 app.use('/total_events', total_events);
 app.use('/admin', admin);
+app.use('/recommender', recommender);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
